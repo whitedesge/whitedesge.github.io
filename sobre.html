@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre o Ingresse</title>
+    <style>
+        :root { --primary-color: #c0c0c0; --secondary-color: #222; }
+        body { background: var(--primary-color); color: var(--secondary-color); font-family: Arial, sans-serif; margin: 0; min-height: 100vh; transition: background 0.3s, color 0.3s; }
+        body.dark-mode { background: #222; color: #f3f3f3; }
+        .barra-lateral { position: fixed; z-index: 10; inset: 0 auto 0 0; width: 220px; box-sizing: border-box; padding: 90px 18px 24px; background: rgba(255, 255, 255, 0.18); border-right: 1px solid rgba(34, 34, 34, 0.18); }
+        .marca-fixa { position: fixed; z-index: 11; top: 24px; left: 24px; color: var(--secondary-color); font-family: 'Arial Black', sans-serif; font-size: 22px; text-decoration: none; }
+        .navegacao { display: flex; flex-direction: column; gap: 10px; }
+        .navegacao a, .navegacao button { display: block; width: 100%; box-sizing: border-box; padding: 10px 12px; border: 1px solid rgba(34, 34, 34, 0.28); border-radius: 10px; background: rgba(255, 255, 255, 0.22); color: var(--secondary-color); font: inherit; text-align: left; text-decoration: none; cursor: pointer; }
+        body.dark-mode .barra-lateral { background: rgba(0, 0, 0, 0.2); border-color: rgba(255, 255, 255, 0.2); }
+        body.dark-mode .marca-fixa, body.dark-mode .navegacao a, body.dark-mode .navegacao button { color: #f3f3f3; }
+        body.dark-mode .navegacao a, body.dark-mode .navegacao button { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.28); }
+        #escuro { background: #222; color: #f3f3f3; }
+        body.dark-mode #escuro { background: #f3f3f3; color: #222; }
+        header, main, footer { margin-left: 220px; }
+        header { padding: 30px 20px 10px; text-align: center; }
+        main { max-width: 760px; padding: 20px; margin-right: auto; margin-left: 220px; }
+        .sobre { padding: 24px; border-radius: 18px; background: rgba(255, 255, 255, 0.16); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12); line-height: 1.6; }
+        footer { padding: 20px; text-align: center; font-size: 14px; }
+        @media (max-width: 700px) { .barra-lateral { position: static; width: 100%; padding: 70px 16px 16px; border-right: 0; border-bottom: 1px solid rgba(34, 34, 34, 0.18); } .marca-fixa { position: absolute; top: 20px; left: 20px; } .navegacao { flex-direction: row; flex-wrap: wrap; } .navegacao a, .navegacao button { width: auto; flex: 1 1 130px; text-align: center; } header, main, footer { margin-left: 0; } }
+    </style>
+    <script>function toggleDarkMode() { document.body.classList.toggle('dark-mode'); }</script>
+</head>
+<body>
+    <a class="marca-fixa" href="Index.html">Ingresse</a>
+    <aside class="barra-lateral"><nav class="navegacao" aria-label="Navegação principal"><button id="escuro" onclick="toggleDarkMode()">Mudar tema</button><a href="Index.html">Filmes em cartaz</a><a href="contato.html">Fale conosco</a><a href="sobre.html">Sobre o Ingresse</a></nav></aside>
+    <header><h1>Sobre o Ingresse</h1></header>
+    <main><section class="sobre"><p>O Ingresse é um catálogo simples para reunir filmes em cartaz em uma página acessível e fácil de navegar.</p><p>Escolha um filme na página principal para ver sua página dedicada. Use o botão “Mudar tema” para alternar entre os modos claro e escuro.</p></section></main>
+    <footer><p>&copy; 2026 Ingresse. Todos os direitos reservados.</p></footer>
+</body>
+</html>
